@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/animation.css">
+    <link rel="stylesheet" href="./css/about.css">
+    <link rel="stylesheet" href="./css/projects.css">
+    <link rel="stylesheet" href="./css/contact.css">
+    <link rel="stylesheet" href="./css/contacts.css">
+    <link rel="stylesheet" href="./css/price.css">
+    <link rel="stylesheet" href="./css/posts.css">
+    <link rel="stylesheet" href="./css/paint.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/cursor.css">
+    <link rel="stylesheet" href="./css/modal-exit.css">
+    <link rel="stylesheet" href="./css/modal-search.css">
+    <link rel="stylesheet" href="./css/modal-menu-bottom.css">
+    <link rel="stylesheet" href="./css/nodal-menu-left.css">
+    <link rel="stylesheet" href="./css/modal-menu-top.css">
+    <link rel="stylesheet" href="./css/modal-cookie.css">
+    <link rel="stylesheet" href="./css/modal-message.css">
+    <link rel="stylesheet" href="./css/modal-load.css">
+    <link rel="stylesheet" href="./css/modal-settings.css">
+    <link rel="stylesheet" href="./css/media-tablet.css">
+    <title>Portfolio</title>
+</head>
+<body>
+    <canvas id="canvas" height="800" width="1500"></canvas>
+
+    <div class="toolbox df jcc aic fdc">
+        <button onclick="increase();" class="df jcc aic">-</button>
+        <span id="size" class="df jcc aic">10</span>
+        <button onclick="crease();" class="df jcc aic">+</button>
+        <input type="color" id="color">
+        <button id="clear" class="df jcc aic"><i class="fas fa-trash-alt"></i></button>
+        <button id="eraser" class="df jcc aic"><i class="fas fa-eraser"></i></button>
+    </div>
+
+
+    <div class="load-content df jcc aic">
+        <div class="loader">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+    <!-- modals 1 -->
+    <div class="modal-menu-bottom read_help_left" aria-label="Меню навигации по внутренним страницам сайта">
+        <span class="df jcc aic">
+            <img src="./img/bottom-menu.png" class="bottom-open" onclick="actionToggle()">
+            <img src="./img/bottom-menu-close.png" class="bottom-close" onclick="actionToggleFalse()">
+        </span>
+		<ul>
+			<li><h2>Карта сайта</h2></li>
+			<li><a href="#">О нас</a></li>
+			<li><a href="#">Все проекты</a></li>
+			<li><a href="#">Наши услуги</a></li>
+			<li><a href="#">Статьи</a></li>
+			<li><a href="#">Наши контакты</a></li>
+            <li><a href="#">Доп. функции</a></li>
+		</ul>
+    </div>
+    <!-- modals 1 -->
+
+
+
+    <!-- modals 2 -->
+    <div class="modal-menu-left df iac">
+            <h3 class="title-site"><a href="#">ZAEB</a></h3>
+            <ul class="functions df fdc">
+                <li class="function func_11 read_help" aria-label="Открыть меню сайта" onclick="func_11()">
+                    <i class="fas fa-ellipsis-h"></i>
+                </li>
+                <li class="function func_ru read_help" aria-label="Русская версия сайта. При нажатии будет изменен язык!" onclick="openLang('./en/index.html');">
+                    <div class="ru">RU</div> 
+                </li>
+                <li class="function func_10 read_help" aria-label="Переместиться наверх" onclick="func_10()">
+                    <i class="far fa-arrow-alt-circle-up"></i>
+                </li>
+                <li class="function func_9 read_help" aria-label="Открыть настройки сайта" onclick="func_9()">
+                    <i class="fas fa-sliders-h"></i>
+                </li>
+                <li class="function func_7 read_help" onclick="func_7()" aria-label="Полноэкранный размер">
+                    <i class="fas fa-compress"></i>
+                </li>
+                <li class="function func_6 read_help" aria-label="Нажмите для активации режима рисования" onclick="func_6()">
+                    <i class="fas fa-palette"></i>
+                </li>
+                <li class="function func_5 read_help" aria-label="Нажмите для редактирования текста на сайте" onclick="func_5()">
+                    <i class="far fa-edit"></i>
+                </li>
+                <li class="function func_4 read_help" aria-label="Поиск по сайту" onclick="func_4()">
+                    <i class="fas fa-search"></i>
+                </li>
+                <li class="function func_12 read_help" aria-label="Очистить кэш" onclick="func_12();">
+                    <i class="far fa-trash-alt"></i>
+                </li>
+                <li class="function func_3 read_help" onclick="func_3()" aria-label="Вы можете отключить анимацию на сайте">
+                    <i class="fas fa-cog animate-decor-menu"></i>
+                </li>
+                <li class="function func_2 read_help" onclick="message('Файл успешно загружен!');" aria-label="Вы можете скачать данный сайт в формате PDF">
+                    <a href="./files/zaeb_development.pdf" download="zaeb_development"><i class="far fa-file-pdf"></i></a>
+                    
+                </li>
+                <li class="function func_1 read_help" aria-label="Выход с сайта" onclick="func_1()">
+                    <i class="fas fa-sign-out-alt"></i>
+                </li>
+            </ul>
+    </div>
+    <!-- modals 2 -->
+
+    <!-- modal 3 -->
+    <div class="modal-exit df jcc aic">
+        <div class="modal modal-exit-content">
+            <h2>Уже уходите?</h2>
+            <iframe src="./modal_exit.html" frameborder="0"></iframe>
+            <div class="exit-buttons df jcc aic">
+                <button class="exit-btn_exit">ВЫЙТИ</button>
+                <button class="exit-btn_close">ОСТАТЬСЯ</button>
+            </div>
+        </div>
+        
+    </div>
+    <!-- modal 3 -->
+
+    <!-- modal 4 -->
+    <div class="modal-cookie">
+        <i class="fas fa-times" onclick="cookie_close()"></i>
+        <p>Мы используем файлы cookie. Они помогают улучшить ваше взаимодействие с сайтом.</p>
+        <button class="modal-cook-btn tag" onclick="cookie_close()"><span>Принять</span></button>
+    </div>
+    <!-- modal 4 -->
+
+    <!-- modal 5 -->
+    <div class="modal-message df jcsb aic">
+        <div class="content">
+            <p class="text-mess"></p>
+            <p class="end-mess">Закрытие через <span class="end-count"></span></p>
+        </div>
+        <i class="fas fa-check"></i>
+    </div>
+    <!-- modal 5 -->
+
+    <!-- modal 6 -->
+    <div class="modal-settings df jcc aic">
+        <div class="modal df fdc">
+            <i class="fas fa-times close-sett" onclick="func_9()"></i>
+            <h2>Настройки сайта</h2>
+            <h3>Общие</h3>
+            <div class="group-sett df fdc">
+                <label class="label_sett" onclick="active_settings();">Убрать изображения
+                    <input type="checkbox" class="img-none">
+                </label>
+                <label class="label_sett" onclick="active_settings();">Убрать цветность изображения
+                    <input type="checkbox" class="img-contrast">
+                </label>
+            </div>
+            <!-- <div class="countSizeText df">
+                <span class="countMinus df jcc aic">-</span>
+                <span class="countText df jcc aic">Размер текста &#32; <span>(размер текста)</span></span>
+                <span class="countPlus df jcc aic">+</span>
+            </div>
+            <h3>Междустрочный интервал</h3>
+            <div class="interval">
+                <button class="small-int">Стандартный</button>
+                <button class="average-int">Средний</button>
+                <button class="big-int">Большой</button>
+            </div>
+            <h3>Межбуквенный интервал</h3>
+            <div class="letters">
+                <button class="small-let">Стандартный</button>
+                <button class="average-let">Средний</button>
+                <button class="big-let">Большой</button>
+            </div>
+            <h3>Шрифт</h3>
+            <select class="">
+                <option selected disabled value="Выберите из списка">Выберите из списка</option>
+                <option value="Montserrat">Montserrat</option>
+                <option value="Sans serif">Sans serif</option>
+            </select>
+            <h3>Цвета сайта</h3>
+            <div class="buttons">
+                <button class="color_1">V1</button>
+                <button class="color_2">V2</button>
+                <button class="color_3">V3</button>
+                <button class="color_4">V4</button>
+                <button class="color_5">V5</button>
+            </div> -->
+            
+        </div>
+    </div>
+    <!-- modal 6 -->
+
+    <!-- modal 7 -->
+    <div class="modal-menu-top">
+        <i class="fas fa-times" onclick="func_11()"></i>
+        <ul>
+            <li><h2>Меню сайта</h2></li>
+            <li><a href="#pageAbout">О нас</a></li>
+            <li><a href="#pageProjects">Проекты</a></li>
+            <li><a href="#pagePrice">Услуги</a></li>
+            <li><a href="#pageContact">Написать нам</a></li>
+            <li><a href="#pageContacts">Контакты</a></li>
+            <li><a href="#pagePosts">Статьи</a></li>
+        </ul>
+    </div>
+    <!-- modal 7 -->
+
+    <!-- modal 8 -->
+    <div class="modal-search df">
+        <input type="text" class="search" placeholder="Поиск">
+        <button><i class="fas fa-search"></i></button>
+    </div>
+    <!-- modal 8 -->
+
+    <!-- modal 9 -->
+    <div class="modal-themes">
+        <div id="themes" class="read_help_left" aria-label="Вы можете сменить тему сайта" onclick="checkThemes();">
+            <i class="indicator"></i>
+        </div>
+    </div>
+    <!-- modal 9 -->
+
+    <!-- header -->
+    <header>
+        <nav class="navigation df jcsb aic padd">
+            <div class="logo">
+                <a href="./index.html">
+                    <img src="./img/logo.png">
+                </a>
+            </div>
+            <ul class="head-links">
+                <li>
+                    <a href="#pageAbout">О НАС</a>
+                </li>
+                <li>
+                    <a href="#pageProjects">ПРОЕКТЫ</a>
+                </li>
+                <li>
+                    <a href="#pagePrice">УСЛУГИ</a>
+                </li>
+                <li>
+                    <a href="#pageContact">НАПИСАТЬ НАМ</a>
+                </li>
+                <li>
+                    <a href="#pageContacts">КОНТАКТЫ</a>
+                </li>
+                <li>
+                    <a href="#pagePosts">СТАТЬИ</a>
+                </li>
+            </ul>
+            <div class="animate-decor">
+                <img src="./img/animate-decor.png">
+            </div>
+            <div class="menu-tablet df jcc aic">
+                <img src="./img/menu-tablet.png" class="menu-tablet-img-open img_1" onclick="active_menu();">
+                <img src="./img/bottom-menu-close.png" class="menu-tablet-img-close img_2" onclick="unactive_menu();">
+            </div>
+        </nav>
+        <div class="head-info df jcsb padd_head">
+            <div class="head-content">
+                <h1 class="head-title">DEVELOPMENT</h1>
+                <p class="head-descr">Компания занимается разработкой сайтов с нуля используя разные современные технологии.</p>
+                <a href="#" class="head-link">НАШИ УСЛУГИ</a>
+            </div>
+            <div class="head-animate-netbok">
+                <div class="animate-content">
+                    <iframe src="data:text/html,<body%20style=margin:0;overflow:hidden><canvas%20id=q%20/><script>var%20q=document.getElementById('q'),s=window.screen,w=q.width=s.width,h=q.height=s.height,p=Array(256).join(1).split(''),c=q.getContext('2d'),m=Math;setInterval(function(){c.fillStyle='rgba(255,255,255,0.05)';c.fillRect(0,0,w,h);c.fillStyle='rgba(0,0,0,1)';p=p.map(function(v,i){r=m.random();c.fillText(String.fromCharCode(m.floor(2720+r*33)),i*10,v);v+=10;%20return%20v>768+r*1e4?0:v})},33)</script>" frameborder="0" class="animate-netbok-header"></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="bg-head-bottom"><img src="./img/head-bottom.png" class="bg-head-bottom-img"></div>
+    </header>
+    <!-- header -->
+
+    <main>
+        <!-- about -->
+        <section class="about" id="pageAbout">
+            <h1 class="section-title df jcc aic about ">
+                <img class="rotate-left" src="./img/head-animate.png">
+                <span>О нас</span>
+                <img class="rotate-right" src="./img/head-animate.png">
+            </h1>
+            <div class="about-container padd df jcsb fww">
+                <div class="about-content">
+                    <p class="about-descr">
+                        Компания занимается разработкой сайтов разного жанра начиная от визиток заканчивая корпоративными порталами, также применяет высокоуровневые технологии такие как React, Laravel, Vue, Yii, Tilda, Wordpress, SQL, NodeJS, RestAPI и др.
+                    </p>
+                    <a href="#" class="about-link">ПОДРОБНЕЕ</a>
+                </div>
+                <div class="about-image" >
+                    <img src="./img/about-image.svg">
+                </div>
+            </div>
+            <div class="about-cards df jcsb aic padd fww">
+                <div class="about-card">
+                    <div class="head-content df jcc fdc aic">
+                        <img src="./img/card-about_1.png">
+                        <h2>Качество</h2>
+                        <img src="./img/bg_decor_1.jpg" class="bg-about-card">
+                    </div>
+                    <div class="body-content">
+                        <p>Компания занимается разработкой сайтов разного жанра начиная от визиток заканчивая корпоративными сайтами.</p>
+                    </div>
+                    <img src="./img/animate-decor-card-about.png" class="animate-card-about-left rotate-left">
+                    <img src="./img/animate-decor-card-about.png" class="animate-card-about-right rotate-right">
+                </div>
+                <div class="about-card">
+                    <div class="head-content df jcc fdc aic">
+                        <img src="./img/card-about_1.png">
+                        <h2>Качество</h2>
+                        <img src="./img/bg_decor_1.jpg" class="bg-about-card">
+                    </div>
+                    <div class="body-content">
+                        <p>Компания занимается разработкой сайтов разного жанра начиная от визиток заканчивая корпоративными сайтами.</p>
+                    </div>
+                    <img src="./img/animate-decor-card-about.png" class="animate-card-about-left rotate-left">
+                    <img src="./img/animate-decor-card-about.png" class="animate-card-about-right rotate-right">
+                </div>
+                <div class="about-card">
+                    <div class="head-content df jcc fdc aic">
+                        <img src="./img/card-about_1.png">
+                        <h2>Качество</h2>
+                        <img src="./img/bg_decor_1.jpg" class="bg-about-card">
+                    </div>
+                    <div class="body-content">
+                        <p>Компания занимается разработкой сайтов разного жанра начиная от визиток заканчивая корпоративными сайтами.</p>
+                    </div>
+                    <img src="./img/animate-decor-card-about.png" class="animate-card-about-left rotate-left">
+                    <img src="./img/animate-decor-card-about.png" class="animate-card-about-right rotate-right">
+                </div>
+            </div>
+        </section>
+        <!-- about -->
+
+        <!-- projects -->
+        <section class="projects" id="pageProjects">
+            <img src="./img/projects-bottom.png" class="top-projects-bg">
+            <h1 class="section-title df jcc aic about">
+                <img class="rotate-left" src="./img/head-animate.png">
+                <span>Проекты</span>
+                <img class="rotate-right" src="./img/head-animate.png">
+            </h1>
+            <div class="projects-cards df jcsa aic padd fww">
+                <div class="projects-card card-info">
+                    <h2 class="projects-head">Проект</h2>
+                    <p class="projects-descr">Компания занимается разработкой сайтов разного жанра начиная от визиток заканчивая корпоративными порталами заканчивая корпоративными покорпоративными.</p>
+                    <a href="#" class="projects-link">Подробнее</a>
+                </div>
+                <div class="projects-card card-iframe">
+                    <iframe frameborder="0" src="http://kuttsform.beget.tech/"></iframe>
+                </div>
+            </div>
+            <div class="project-buttons df jcc aic fww">
+                <button class="btn-generate">СГЕНЕРИРОВАТЬ ПРОЕКТ</button>
+                <button class="btn-all-projects" onclick="window.open('./project.html')">ВСЕ ПРОЕКТЫ</button>
+            </div>
+            <img src="./img/projects-bottom.png" class="bottom-projects-bg">
+        </section>
+        <!-- projects -->
+
+        
+        <!-- price -->
+        <section class="price" id="pagePrice">
+            <h1 class="section-title df jcc aic about">
+                <img class="rotate-left" src="./img/head-animate.png">
+                <span>услуги</span>
+                <img class="rotate-right" src="./img/head-animate.png">
+            </h1>
+            <div class="price-tags padd">
+                <button class="price-tag tag"><span>HTML</span></button>
+                <button class="price-tag tag"><span>CSS</span></button>
+                <button class="price-tag tag"><span>Серверное программирование</span></button>
+                <button class="price-tag tag"><span>React</span></button>
+                <button class="price-tag tag"><span>WordPress</span></button>
+                <button class="price-tag tag"><span>Laravel</span></button>
+                <button class="price-tag tag"><span>Клиентское программирование</span></button>
+                <button class="price-tag tag"><span>JavaScript</span></button>
+                <button class="price-tag tag"><span>SQL</span></button>
+                <button class="price-tag tag"><span>PHP</span></button>
+            </div>
+            <div class="price-cards df jcsb aic padd fww">
+                <div class="price-card">
+                    <div class="price-card-head">
+                        <img src="./img/price-card-1.png" alt="">
+                    </div>
+                    <div class="price-card-body">
+                        <p>Одностраничный сайт о представлении деятельности компании</p>
+                        <div class="card-tags">
+                            <button class="tag">HTML</button>
+                            <button class="tag">CSS</button>
+                            <button class="tag">PHP</button>
+                            <button class="tag">JavaScript</button>
+                        </div>
+                    </div>
+                    <div class="price-card-footer df jcsb">
+                        <button class="fullscreen-price read_help" aria-label="Просмотр  краткого содержания услуги">
+                            <i class="fas fa-compress"></i>
+                        </button>
+                        <a href="./service.html" class="read-price df jcc aic read_help_left" aria-label="Переход на страницу услуги">
+                            <i class="fas fa-chevron-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="price-card">
+                    <div class="price-card-head">
+                        <img src="./img/price-card-1.png" alt="">
+                    </div>
+                    <div class="price-card-body">
+                        <p>Одностраничный сайт о представлении деятельности компании</p>
+                        <div class="card-tags">
+                            <button class="tag">HTML</button>
+                            <button class="tag">CSS</button>
+                            <button class="tag">PHP</button>
+                            <button class="tag">JavaScript</button>
+                        </div>
+                    </div>
+                    <div class="price-card-footer df jcsb">
+                        <button class="fullscreen-price read_help" aria-label="Просмотр  краткого содержания услуги">
+                            <i class="fas fa-compress"></i>
+                        </button>
+                        <a href="./service.html" class="read-price df jcc aic read_help_left" aria-label="Переход на страницу услуги">
+                            <i class="fas fa-chevron-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="price-card">
+                    <div class="price-card-head">
+                        <img src="./img/price-card-1.png" alt="">
+                    </div>
+                    <div class="price-card-body">
+                        <p>Одностраничный сайт о представлении деятельности компании</p>
+                        <div class="card-tags">
+                            <button class="tag">HTML</button>
+                            <button class="tag">CSS</button>
+                            <button class="tag">PHP</button>
+                            <button class="tag">JavaScript</button>
+                        </div>
+                    </div>
+                    <div class="price-card-footer df jcsb">
+                        <button class="fullscreen-price read_help" aria-label="Просмотр  краткого содержания услуги">
+                            <i class="fas fa-compress"></i>
+                        </button>
+                        <a href="./service.html" class="read-price df jcc aic read_help_left" aria-label="Переход на страницу услуги">
+                            <i class="fas fa-chevron-right"></i>
+                        </a>
+                    </div>
+                </div>
+                    <div class="price-card">
+                        <div class="price-card-head">
+                            <img src="./img/price-card-1.png" alt="">
+                        </div>
+                        <div class="price-card-body">
+                            <p>Одностраничный сайт о представлении деятельности компании</p>
+                            <div class="card-tags">
+                                <button class="tag">HTML</button>
+                                <button class="tag">CSS</button>
+                                <button class="tag">PHP</button>
+                                <button class="tag">JavaScript</button>
+                            </div>
+                        </div>
+                        <div class="price-card-footer df jcsb">
+                            <button class="fullscreen-price">
+                                <i class="fas fa-compress"></i>
+                            </button>
+                            <a href="#" class="read-price df jcc aic">
+                                <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="price-card">
+                        <div class="price-card-head">
+                            <img src="./img/price-card-1.png" alt="">
+                        </div>
+                        <div class="price-card-body">
+                            <p>Одностраничный сайт о представлении деятельности компании</p>
+                            <div class="card-tags">
+                                <button class="tag">HTML</button>
+                                <button class="tag">CSS</button>
+                                <button class="tag">PHP</button>
+                                <button class="tag">JavaScript</button>
+                            </div>
+                        </div>
+                        <div class="price-card-footer df jcsb">
+                            <button class="fullscreen-price">
+                                <i class="fas fa-compress"></i>
+                            </button>
+                            <a href="#" class="read-price df jcc aic">
+                                <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="price-card">
+                        <div class="price-card-head">
+                            <img src="./img/price-card-1.png" alt="">
+                        </div>
+                        <div class="price-card-body">
+                            <p>Одностраничный сайт о представлении деятельности компании</p>
+                            <div class="card-tags">
+                                <button class="tag">HTML</button>
+                                <button class="tag">CSS</button>
+                                <button class="tag">PHP</button>
+                                <button class="tag">JavaScript</button>
+                            </div>
+                        </div>
+                        <div class="price-card-footer df jcsb">
+                            <button class="fullscreen-price">
+                                <i class="fas fa-compress"></i>
+                            </button>
+                            <a href="#" class="read-price df jcc aic">
+                                <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <!-- price -->
+
+
+        <!-- forms -->
+        <section class="contact df fdc aic" id="pageContact">
+            <h1 class="section-title df jcc aic contact-head padd">
+                <img class="rotate-left" src="./img/head-animate.png">
+                <span>Написать нам</span>
+                <img class="rotate-right" src="./img/head-animate.png">
+            </h1>
+            <form action="#" class="sendForm padd">
+                <div class="input-group">
+                    <div class="colBox">
+                        <div class="inputBox">
+                            <input type="text" name="" required placeholder="Введите ваше имя">
+                            <span class="inputText">Ваше имя</span>
+                            <span class="inputLine"></span>
+                        </div>
+                    </div>
+                    <div class="colBox">
+                        <div class="inputBox">
+                            <select required>
+                                <option value="" disabled selected>Тип разработки (выберите из списка)</option>
+                                <option value="Landing Page (одностраничный сайт)">Landing Page (одностраничный сайт)</option>
+                            </select>
+                            <span class="inputText"></span>
+                            <span class="inputLine"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <div class="colBox">
+                        <div class="inputBox">
+                            <input type="text" required name="" placeholder="Введите ваш номер телефона">
+                            <span class="inputText">Ваш номер телефона</span>
+                            <span class="inputLine"></span>
+                        </div>
+                    </div>
+                    <div class="colBox">
+                        <div class="inputBox">
+                            <input type="text" name="" required placeholder="Введите ваш E-mail">
+                            <span class="inputText">Ваш E-mail</span>
+                            <span class="inputLine"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <div class="colBox">
+                        <div class="inputBox">
+                            <input type="text" name="" placeholder="Введите задачу проекта" required>
+                            <span class="inputText">Задача проекта</span>
+                            <span class="inputLine"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <div class="colBox">
+                        <div class="inputBox textarea">
+                            <textarea required placeholder="Введите описание требуемой задачи"></textarea>
+                            <span class="inputText">Описание задачи</span>
+                            <span class="inputLine"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <div class="colBox">
+                        <input type="submit" value="ОТПРАВИТЬ">
+                    </div>
+                </div>
+            </form>
+            <span class="animate-left">
+                <img src="./img/contact-animate.png">
+            </span>
+            <img src="./img/contact-animate.png" class="animate-big">
+            <img src="./img/contact-animate.png" class="animate-small">
+
+            <img src="./img/contact-bottom.png" class="contact-bottom">
+            <img src="./img/contact-bottom.png" class="contact-top">
+        </section>
+        <!-- forms -->
+
+
+        <!-- contacts -->
+        <section class="contacts padd" id="pageContacts">
+            <h1 class="section-title df jcc aic about">
+                <img class="rotate-left" src="./img/head-animate.png">
+                <span>Контакты</span>
+                <img class="rotate-right" src="./img/head-animate.png">
+            </h1>
+            <div class="contacts-info df jcsb aic fww">
+                <div class="contacts-info-content">
+                    <h2 class="cont-title">Email:</h2>
+                    <div class="cont-body df aic">
+                        <div class="cont-text">
+                            <p class="cont-descr">vladimirmihajlov0893@gmail.com</p>
+                        </div>
+                        
+                        <span>
+                            <a href="#" class="df jcc aic">
+                                <i class="fas fa-long-arrow-alt-right"></i>
+                            </a>
+                        </span>
+                    </div>
+                    <a href="#" class="allInfo tag"><span>ПОДРОБНЕЕ</span></a>
+                </div>
+                <img src="./img/img-contacts.svg">
+            </div>
+        </section>
+        <!-- contacts -->
+
+
+        <!-- posts -->
+        <section class="posts padd" id="pagePosts">
+            <h1 class="section-title df jcc aic padd">
+                <img class="rotate-left" src="./img/head-animate.png">
+                <span>Статьи</span>
+                <img class="rotate-right" src="./img/head-animate.png">
+            </h1>
+            <div class="post-cards df jcsb aic fww">
+                <div class="post-card df jcc fdc">
+                    <h3 class="post-head">основы HTML</h3>
+                    <p class="post-cont">Здесь будет располагаться текст который в будущем будет использоваться как наполнение данного текста контентом который будет привлекать клиентов и обычных пользователей.</p>
+                    <a href="./post.html" class="readMorePost">читать далее</a>
+                </div>
+                <div class="post-card df jcc fdc">
+                    <h3 class="post-head">основы HTML</h3>
+                    <p class="post-cont">Здесь будет располагаться текст который в будущем будет использоваться как наполнение данного текста контентом который будет привлекать клиентов и обычных пользователей.</p>
+                    <a href="#" class="readMorePost">читать далее</a>
+                </div>
+                <div class="post-card df jcc fdc">
+                    <h3 class="post-head">основы HTML</h3>
+                    <p class="post-cont">Здесь будет располагаться текст который в будущем будет использоваться как наполнение данного текста контентом который будет привлекать клиентов и обычных пользователей.</p>
+                    <a href="#" class="readMorePost">читать далее</a>
+                </div>
+                <div class="post-card df jcc fdc">
+                    <h3 class="post-head">основы HTML</h3>
+                    <p class="post-cont">Здесь будет располагаться текст который в будущем будет использоваться как наполнение данного текста контентом который будет привлекать клиентов и обычных пользователей.</p>
+                    <a href="#" class="readMorePost">читать далее</a>
+                </div>
+                <div class="post-card df jcc fdc">
+                    <h3 class="post-head">основы HTML</h3>
+                    <p class="post-cont">Здесь будет располагаться текст который в будущем будет использоваться как наполнение данного текста контентом который будет привлекать клиентов и обычных пользователей.</p>
+                    <a href="#" class="readMorePost">читать далее</a>
+                </div>
+                <div class="post-card df jcc fdc">
+                    <h3 class="post-head">основы HTML</h3>
+                    <p class="post-cont">Здесь будет располагаться текст который в будущем будет использоваться как наполнение данного текста контентом который будет привлекать клиентов и обычных пользователей.</p>
+                    <a href="#" class="readMorePost">читать далее</a>
+                </div>
+            </div>
+        </section>
+        <!-- posts -->
+    </main>
+    <footer>
+        <img src="./img/footer-top-bg.png" class="footer-bg">
+        <div class="cols-link df jcsb ais padd fww">
+            <div class="col-link">
+                <ul>
+                    <li><h2>Навигация</h2></li>
+                    <li><a href="#pageAbout">О нас</a></li>
+                    <li><a href="#pageProjects">Проекты</a></li>
+                    <li><a href="#pagePrice">Услуги</a></li>
+                    <li><a href="#pageContact">Написать нам</a></li>
+                    <li><a href="#pageContacts">Контакты</a></li>
+                    <li><a href="#pagePosts">Статьи</a></li>
+                </ul>
+            </div>
+            <div class="col-link">
+                <ul>
+                    <li><h2>Меню</h2></li>
+                    <li><a href="#">О нас</a></li>
+                    <li><a href="#">Все проекты</a></li>
+                    <li><a href="#">Наши услуги</a></li>
+                    <li><a href="#">Статьи</a></li>
+                    <li><a href="#">Наши контакты</a></li>
+                    <li><a href="#">Доп. функции</a></li>
+                </ul>
+            </div>
+            <div class="col-link">
+                <ul>
+                    <li><h2>Мы в соц. сетях</h2></li>
+                    <li><a href="#"><i class="fab fa-vk"></i></a></li>
+                </ul>
+            </div>
+            <div class="col-link">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img src="./img/logo.png">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright padd"></div>
+    </footer>
+
+    <div id="cursor"></div>
+    
+
+    <script src="https://kit.fontawesome.com/7438528e75.js" crossorigin="anonymous"></script>
+    <script src="./script/script.js"></script>
+    <script src="./script/settings.js"></script>
+    <script src="./script/paint.js"></script>
+</body>
+</html>

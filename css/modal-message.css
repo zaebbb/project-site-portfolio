@@ -1,0 +1,40 @@
+.modal-message{
+    position: fixed;
+    max-width: 500px;
+    padding: 20px;
+	box-shadow: 0 0px 20px rgba(0,0,0,0.5);
+    z-index: 10000;
+    background: rgba(255,255,255,1);
+    border-radius: 10px 0px 0px 10px;
+    right: 0;
+    top: 5%;
+    transform: translateX(100px);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 10000000;
+}
+.modal-message .content p{
+    font-family: 'Montserrat';
+    font-weight: 100;
+    font-size: 18px;
+    line-height: 150.4%;
+    padding-right: 20px;
+}
+.modal-message i{
+    color: rgb(0, 255, 0);
+    border: 2px solid rgb(0, 255, 0);
+    padding: 10px;
+    border-radius: 50%;
+}
+.modal-message.active{
+    transform: translateX(0px);
+    opacity: 1;
+    visibility: visible;
+}
+.modal-message .content p.end-mess{
+    opacity: 0;
+    font-size: 16px;
+}
+.modal-message .content p.end-mess.active{
+    opacity: 1;
+}

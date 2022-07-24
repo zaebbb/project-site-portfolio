@@ -1,0 +1,96 @@
+/* -----about----- */
+.about-descr{
+    font-family: 'Montserrat';
+    font-size: 25px;
+    font-weight: 300;
+    line-height: 150.4%;
+    max-width: 500px;
+    margin-bottom: 50px;
+}
+.about-link{
+    color: #1a1a1a;
+    padding: 15px 35px;
+    border: 1px solid #1a1a1a;
+    border-radius: 8px;
+    font-family: 'Montserrat';
+}
+.about-image{
+    max-width: 500px;
+}
+.about-card{
+    border-radius: 8px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    margin: 10px;
+    margin-bottom: 100px;
+    margin-top: 80px;
+}
+.about-card .head-content{
+    position: relative;
+    overflow: hidden;
+}
+.about-card .head-content img:nth-child(1){
+    width: 70px;
+    padding-top: 25px;
+    padding-bottom: 20px;
+    position: relative;
+    z-index: 2;
+}
+.about-card .head-content h2{
+    font-family: 'Caviar Dreams';
+    font-weight: 100;
+    font-size: 24px;
+    line-height: 30px;
+    padding-bottom: 10px;
+    position: relative;
+    z-index: 2;
+}
+.about-card .head-content .bg-about-card{
+    position: absolute;
+    z-index: 1;
+    transform: translateY(-300px);
+}
+.about-card:hover .head-content .bg-about-card{
+    transform: translateY(0px);
+}
+.about-card:hover .head-content{
+    color: #fff;
+}
+.about-card:hover .head-content img:nth-child(1){
+    filter: invert(1);
+}
+.about-card .body-content{
+    display: block;
+    padding: 25px 15px;
+    padding-bottom: 40px;
+}
+.about-card .body-content p{
+    font-family: 'Montserrat';
+    font-weight: 200;
+    font-size: 18px;
+    line-height: 150.4%;
+}
+.about-card .animate-card-about-right,
+.about-card .animate-card-about-left{
+    position: absolute;
+    width: 20px;
+    bottom: 0px;
+    transform: translateY(-20px);
+    opacity: 0;
+}
+.about-card .animate-card-about-left{
+    left: 10px;
+}
+.about-card .animate-card-about-right{
+    right: 10px;
+}
+.about-card:hover .animate-card-about-right,
+.about-card:hover .animate-card-about-left{
+    transform: translateX(0px);
+    opacity: 1;
+    bottom: 10px;
+}
+/* -----end about----- */

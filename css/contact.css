@@ -1,0 +1,180 @@
+/* -----contact----- */
+.contact-head::after{
+    transform: translateX(-370px);
+}
+.contact-head::before{
+    transform: translateX(370px);
+}
+.contact-head{
+    padding-top: 250px;
+}
+.contact{
+    background: url('./../img/bg-form.png') no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+.contact h1{
+    color: #fff;
+}
+.contact .sendForm{
+    position: relative;
+    padding: 50px;
+    background: rgba(255,255,255,0.3);
+    backdrop-filter: blur(40px);
+    border-radius: 15px;
+    z-index: 100;
+    max-width: 1000px;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 250px;
+}
+.input-group{
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+.input-group .colBox{
+    position: relative;
+    width: 100%;
+    padding: 0px 10px;
+    margin: 30px 0px 20px;
+}
+.input-group .colBox .inputBox{
+    position: relative;
+    width: 100%;
+    height: 40px;
+    color: #fff;
+}
+.input-group .colBox .inputBox textarea,
+.input-group .colBox .inputBox select,
+.input-group .colBox .inputBox input{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 8px;
+    background: transparent;
+    box-shadow: none;
+    font-size: 0px;
+    padding: 0px 10px;
+    z-index: 1;
+    color: #000;
+    resize: none;
+    font-family: 'Montserrat';
+}
+.colBox .inputBox .inputText{
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 40px;
+    font-size: 18px;
+    padding: 0px 10px;
+    display: block;
+    pointer-events: none;
+    font-family: 'Montserrat';
+    font-weight: 100;
+}
+.input-group .colBox .inputBox select{
+    font-size: 18px !important;
+    color: #fff;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    font-weight: 100;
+}
+.input-group .colBox .inputBox select option{
+    color: #1a1a1a;
+    font-weight: 300;
+}
+.input-group .colBox .inputBox select:valid,
+.input-group .colBox .inputBox select:focus,
+.input-group .colBox .inputBox textarea:valid,
+.input-group .colBox .inputBox textarea:focus,
+.input-group .colBox .inputBox input:valid,
+.input-group .colBox .inputBox input:focus{
+    font-size: 15px;
+    font-family: 'Montserrat';
+}
+.input-group .colBox .inputBox select:valid ~ .inputText,
+.input-group .colBox .inputBox select:focus ~ .inputText,
+.input-group .colBox .inputBox textarea:valid ~ .inputText,
+.input-group .colBox .inputBox textarea:focus ~ .inputText,
+.input-group .colBox .inputBox input:valid ~ .inputText,
+.input-group .colBox .inputBox input:focus ~ .inputText{
+    top: -35px;
+    left: -10px;
+    font-size: 15px;
+    opacity: 0;
+}
+.input-group .colBox .inputBox .inputLine{
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    border-radius: 2px;
+    pointer-events: none;
+}
+.input-group .colBox .inputBox input:valid ~ .inputLine,
+.input-group .colBox .inputBox input:focus ~ .inputLine{
+    height: 100%;
+}
+.input-group .colBox .textarea{
+    position: relative;
+    width: 100%;
+    height: 100px;
+    padding: 10px 0;
+}
+.input-group .colBox .textarea textarea:valid ~ .inputLine,
+.input-group .colBox .textarea textarea:focus ~ .inputLine{
+    height: 100%;
+}
+.contact-top,
+.contact-bottom{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.contact-top{
+    top: 0;
+    transform: rotate(180deg);
+}
+.contact .animate-left{
+    position: absolute;
+    left: -15%; 
+    top: 31%;
+}
+.contact .animate-big{
+    position: absolute;
+    top: 20%;
+    right: -10%;
+    width: 350px;
+}
+.contact .animate-small{
+    position: absolute;
+    top: 50%;
+    width: 200px;
+    right: -6%;
+}
+.input-group .colBox input[type="submit"]{
+    width: 50%;
+    padding: 10px;
+    color: #fff;
+    border: 1px solid #fff;
+    font-family: 'Montserrat';
+    background: transparent;
+    font-size: 24px;
+    line-height: 29px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.input-group .colBox input[type="submit"]:hover{
+    color: #1a1a1a;
+    background: #fff;
+}
+/* -----end contact----- */

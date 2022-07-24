@@ -1,0 +1,71 @@
+.contacts-info img{
+    max-width: 500px;
+    width: 100%;
+}
+.contacts-info .contacts-info-content .cont-title{
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 150.4%;
+    color: #1a1a1a;
+    margin-bottom: 15px;
+}
+.contacts-info .contacts-info-content .cont-body .cont-text{
+    margin-right: 20px;
+}
+.contacts-info .contacts-info-content .cont-body .cont-text .cont-descr{
+    font-family: 'Montserrat';
+    font-weight: 300;
+    font-size: 25px;
+    line-height: 150.4%;
+}
+.contacts-info .contacts-info-content .cont-body .cont-text{
+    background: #fff;
+    border-radius: 8px;
+}
+.contacts-info .contacts-info-content .cont-body:hover .cont-text{
+    background: url('./../img/bg_decor_7.jpg');
+    background-size: cover;
+}
+.contacts-info .contacts-info-content .cont-body:hover .cont-text .cont-descr{
+    color: #1a1a1a;
+    mix-blend-mode: lighten;
+    background: #fff;
+}
+.contacts-info .contacts-info-content .cont-body span{
+    width: 20px;
+    height: 20px;
+    background: url('./../img/head-animate.png');
+    background-size: cover;
+}
+.contacts-info .contacts-info-content .cont-body:hover span{
+    transform: translateX(30px);
+    width: 40px;
+    height: 40px;
+}
+.contacts-info .contacts-info-content .cont-body span a{
+    width: 100%;
+    height: 100%;
+}
+.contacts-info .contacts-info-content .cont-body span a i{
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0);
+}
+.contacts-info .contacts-info-content .cont-body:hover span a i{
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+}
+.contacts-info .contacts-info-content .cont-body{
+    padding-bottom: 60px;
+}
+.contacts-info .contacts-info-content .allInfo{
+    font-family: 'Montserrat';
+    font-weight: 300;
+    font-size: 20px;
+    padding: 15px 40px;
+    border: 1px solid #1a1a1a;
+    border-radius: 10px;
+    color: #1a1a1a;
+}

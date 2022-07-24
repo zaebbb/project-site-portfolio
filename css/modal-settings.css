@@ -1,0 +1,141 @@
+.modal-settings{
+    position: fixed;
+    z-index: 10000;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
+    background: rgba(0,0,0,0.5);
+    opacity: 0;
+    visibility: hidden;
+}
+.modal-settings.active{
+    visibility: visible;
+    opacity: 1;
+}
+.modal-settings .modal{
+    width: 90%;
+    height: 90%;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 30px;
+    position: relative;
+}
+.modal-settings .modal h2{
+    font-family: 'Caviar Dreams';
+    font-size: 24px;
+    text-transform: unset;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+.modal-settings .modal h3{
+    font-family: 'Montserrat';
+    text-transform: unset;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+.modal-settings .modal button{
+    padding: 10px 20px;
+    margin-right: 5px;
+    border: 1px solid #1a1a1a;
+    border-radius: 8px;
+    background: transparent;
+    font-family: 'Montserrat';
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.modal-settings .modal button:hover{
+    background: #1a1a1a;
+    color: #fff;
+    cursor: pointer;
+}
+.modal-settings .modal select{
+    max-width: 300px;
+    padding: 10px 20px;
+    font-family: 'Montserrat';
+    font-size: 14px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    appearance: none;
+    -webkit-appearance: none;
+}
+.modal-settings .modal .countSizeText .countPlus,
+.modal-settings .modal .countSizeText .countMinus{
+    /* display: inline-block; */
+    position: relative;
+    border-radius: 8px;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #1a1a1a;
+    font-size: 20px;
+    margin-right: 15px;
+    font-family: 'Montserrat';
+}
+.modal-settings .modal .countSizeText .countText{
+    border: 1px solid #1a1a1a;
+    height: 40px;
+    width: 300px;
+    border-radius: 8px;
+    font-size: 16px;
+    margin-right: 15px;
+    font-family: 'Montserrat';
+    margin-bottom: 10px;
+}
+.modal-settings .modal label{
+    margin-bottom: 10px;
+    font-size: 16px;
+    margin-right: 15px;
+    font-family: 'Montserrat';
+    position: relative;
+    transform: translateX(30px);
+}
+.modal-settings .modal label input{
+    opacity: 0;
+}
+.label_sett::before{
+    content: '\1F5F8';
+    position: absolute;
+    transform: translateX(-30px);
+    width: 15px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    height: 15px;
+    border: 1px solid #1a1a1a;
+    border-radius: 4px;
+    transition: .5s;
+}
+.label_sett.active::before{
+    background: #1a1a1a;
+}
+.modal-settings .modal .countSizeText .countPlus:hover,
+.modal-settings .modal .countSizeText .countMinus:hover{
+    background: #1a1a1a;
+    color: #fff;
+    cursor: pointer;
+}
+.close-sett{
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+
+
+
+/* settings */
+img.displaying{
+    display: none !important;
+}
+img.displaying ~ *{
+    color: #1a1a1a !important;
+}
+img.filtryng{
+    filter: saturate(0)
+}

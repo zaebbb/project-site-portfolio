@@ -1,0 +1,110 @@
+/* animate 1 */
+.animate-decor{
+    animation: animate_decor 10s linear infinite;
+    /* min-width: 100px; */
+}
+.animate-left{
+    animation: animate_decor 15s linear infinite;
+}
+
+.animate-small{
+    animation: animate_decor 15s linear infinite;
+}
+.animate-big{
+    animation: animate_right_btn 30s linear infinite;
+}
+@keyframes animate_decor{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg) ;
+    }
+}
+/* animate heading */
+.rotate-left{
+    animation: animate_left 10s linear infinite;
+}
+@keyframes animate_left{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.rotate-right{
+    animation: animate_right 10s linear infinite;
+}
+@keyframes animate_right{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(-360deg);
+    }
+}
+.project-buttons button:nth-child(1)::before,
+.project-buttons button:nth-child(2)::before{
+    animation: animate_left_btn 10s linear infinite;
+}
+.project-buttons button:nth-child(1)::after,
+.project-buttons button:nth-child(2)::after{
+    animation: animate_right_btn 10s linear infinite;
+}
+.cols-link .col-link:nth-child(1) ul li a::before,
+.cols-link .col-link:nth-child(2) ul li a::before{
+    animation: animate_left_btn 10s linear infinite;
+}
+@keyframes animate_left_btn{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes animate_right_btn{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(-360deg);
+    }
+}
+.animate-decor-menu{
+    animation: animate_decor 10s linear infinite;
+}
+
+
+/* close animate */
+.animate-decor.deleteAnimate{
+    animation: animate_decor 0s linear infinite !important;
+}
+.animate-left.deleteAnimate{
+    animation: animate_decor 0s linear infinite !important;
+}
+.animate-small.deleteAnimate{
+    animation: animate_decor 0s linear infinite !important;
+}
+.animate-big.deleteAnimate{
+    animation: animate_right_btn 0s linear infinite !important;
+}
+.rotate-left.deleteAnimate{
+    animation: animate_left 0s linear infinite !important;
+}
+.rotate-right.deleteAnimate{
+    animation: animate_right 0s linear infinite !important;
+}
+.project-buttons button.deleteAnimate:nth-child(1)::before,
+.project-buttons button.deleteAnimate:nth-child(2)::before{
+    animation: animate_left_btn 0s linear infinite !important;
+}
+.project-buttons button.deleteAnimate:nth-child(1)::after,
+.project-buttons button.deleteAnimate:nth-child(2)::after{
+    animation: animate_right_btn 0s linear infinite !important;
+}
+.animate-decor-menu.deleteAnimate{
+    animation: animate_decor 0s linear infinite !important;
+    transform: translateX(0) !important;
+}

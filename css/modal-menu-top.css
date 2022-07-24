@@ -1,0 +1,43 @@
+.modal-menu-top{
+    position: fixed;
+    z-index: 10000;
+    max-width: 300px;
+    width: 100%;
+    background: #fff;
+    padding: 20px;
+    border-radius: 0px 0px 10px 10px;
+    left: 20%;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-50px);
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.5);
+}
+.modal-menu-top i{
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    cursor: pointer;
+    font-size: 20px;
+}
+.modal-menu-top ul li h2{
+    font-family: 'Caviar Dreams';
+    font-size: 24px;
+    margin-bottom: 20px;
+    margin-top: 5px;
+    font-weight: 500;
+}
+.modal-menu-top ul li{
+    margin-bottom: 15px;
+}
+.modal-menu-top ul li a{
+    font-family: 'Montserrat';
+    font-weight: 300;
+    color: #1a1a1a;
+    font-size: 18px;
+    line-height: 22px;
+}
+.modal-menu-top.active{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px);
+}

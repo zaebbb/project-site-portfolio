@@ -1,0 +1,100 @@
+.modal-menu-bottom{
+	position: fixed;
+	bottom: 30px;
+	right: 15px;
+    z-index: 10000;
+	width: 50px;
+	height: 50px;
+	background: #fff;
+	border-radius: 50%;
+	box-shadow: 0 0px 20px rgba(0,0,0,0.3);
+	cursor: pointer;
+}
+.modal-menu-bottom span{
+	position: relative;
+	width: 25px;
+	height: 25px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+	transition: 0.5s;
+}
+.modal-menu-bottom span img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal-menu-bottom ul{
+	position: absolute;
+	bottom: 55px;
+	background: #fff;
+	min-width: 250px;
+	padding: 20px;
+	border-radius: 20px;
+	visibility: hidden;
+	opacity: 0;
+    transform: translateX(-200px);
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.3);
+}
+.modal-menu-bottom.active ul{
+	bottom: 100px;
+	visibility: visible;
+	opacity: 1;
+}
+.modal-menu-bottom ul li{
+	list-style: none;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: start;
+	-ms-align-items: center;
+	align-items: center;
+	padding: 10px 0;
+	transition: 0.5s;
+}
+.modal-menu-bottom ul li h2{
+    font-family: 'Caviar Dreams';
+    font-size: 22px;
+    line-height: 26px;
+    font-weight: 100;
+    color: #1a1a1a;
+    margin-bottom: 15px;
+}
+.modal-menu-bottom ul li a{
+    font-family: 'Montserrat';
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 22px;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+}
+.bottom-close{
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(0);
+	/* display: none !important; */
+	transition: 0.5s;
+	position: absolute;
+}
+.modal-menu-bottom.active span .bottom-close{
+    visibility: visible;
+    opacity: 1;
+    transform: scale(0.7);
+	transition: 0.5s;
+}
+.bottom-open{
+	display: block;
+	visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+	transition: 0.5s;
+	position: absolute;
+}
+.modal-menu-bottom.active span .bottom-open{
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(0);
+	transition: 0.5s;
+}

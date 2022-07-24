@@ -1,0 +1,105 @@
+/* -----price----- */
+.price-tags .price-tag{
+    padding: 5px 25px;
+    border: 1px solid #1a1a1a;
+    font-family: 'Montserrat';
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 27px;
+    color: #1a1a1a;
+    border-radius: 10px;
+    background: transparent;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+.price-tags .price-tag:hover span{
+    position: relative;
+    z-index: 10000;
+    color: #fff;
+}
+.price-tags{
+    margin-bottom: 40px;
+}
+.price-card{
+    max-width: 300px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 60px;
+}
+.price-card-body{
+    padding: 20px;
+}
+.price-card-body p{
+    font-family: 'Montserrat';
+    font-weight: 100;
+    font-size: 18px;
+    line-height: 150.4%;
+    margin-bottom: 15px;
+}
+.price-card-body .card-tags .tag{
+    border: 1px solid #000000;
+    border-radius: 10px;
+    font-family: 'Montserrat';
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+    padding: 5px 15px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    background: transparent;
+    cursor: pointer;
+}
+.price-card-body .card-tags .tag:hover{
+    background: #1a1a1a;
+    color: #fff;
+}
+.price-card-body{
+    padding-bottom: 60px;
+}
+.price-card-footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+.price-card-footer .read-price,
+.price-card-footer .fullscreen-price{
+    background: url('./../img/bg_decor_7.jpg');
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    color: #fff;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+.price-card-footer .fullscreen-price{
+    border-top-right-radius: 25px;
+    opacity: 0;
+}
+.price-card-footer .read_help::before{
+    bottom: 20px;
+}
+.price-card-footer .read_help_left::before{
+    right: 60px;
+    bottom: 20px;
+    text-transform:initial;
+}
+.price-card-footer .read-price{
+    border-top-left-radius: 25px;
+}
+.price-card:hover{
+    transform: translateY(-15px);
+}
+.price-card:hover .price-card-footer .fullscreen-price{
+    opacity: 1;
+}
+.price{
+    padding-bottom: 60px;
+}
+/* -----end price----- */

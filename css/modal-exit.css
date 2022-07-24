@@ -1,0 +1,52 @@
+.modal-exit{
+    position: fixed;
+    z-index: 10000;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
+    background: rgba(0,0,0,0.5);
+    opacity: 0;
+    visibility: hidden;
+}
+.modal-exit.active{
+    visibility: visible;
+    opacity: 1;
+}
+.modal-exit .modal{
+    width: 90%;
+    height: 90%;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.modal-exit .modal h2{
+    text-align: center;
+    color: #1a1a1a;
+    font-family: 'Caviar Dreams';
+    transform: translateY(120px);
+}
+.modal-exit .modal iframe{
+    width: 100%;
+    height: 100%;
+    padding-bottom: 100px;
+}
+.modal-exit .modal .exit-buttons{
+    transform: translateY(-200px);
+}
+.modal-exit .modal .exit-buttons button{
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-family: 'Montserrat';
+    border: 1px solid #1a1a1a;
+    color: #1a1a1a;
+    background: transparent;
+    font-size: 18px;
+    line-height: 22px;
+    cursor: pointer;
+    margin: 10px;
+}
+.modal-exit .modal .exit-buttons button:hover{
+    background: #1a1a1a;
+    color: #fff;
+}

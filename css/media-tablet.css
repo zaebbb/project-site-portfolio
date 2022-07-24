@@ -1,0 +1,196 @@
+/* globals */
+.padd_head{
+    padding: 0px 0px 0px 130px;
+}
+@media (max-width: 1000px){
+    .padd{
+        padding: 0px 70px 0px 120px;
+    }
+    .padd_head{
+        padding: 0px 0px 0px 120px
+    }
+}
+@media (max-width: 800px){
+    .padd{
+        padding: 0px 60px 0px 110px;
+    }
+    .padd_head{
+        padding: 0px 0px 0px 110px
+    }
+}
+@media (max-width: 700px){
+    .padd{
+        padding: 0px 50px 0px 50px;
+    }
+    .padd_form{
+        padding-left: 0;
+    }
+    .padd_head{
+        padding: 0px 0px 0px 50px;
+    }
+    .modal-menu-left{
+        transform: translateX(-100px);
+    }
+    .modal-menu-left.active{
+        transform: translateX(0px);
+    }
+    .menu-tablet{
+        opacity: 1;
+        display: flex;
+    }
+    .modal-search{
+        width: 100%;
+        padding: 5px;
+    }
+    .modal-search input{
+        width: 100%;
+    }
+    .modal-search button{
+        transform: translateX(0px) !important;
+        width: 45px !important;height: 45px !important;
+        margin-left: 5px;
+    }
+}
+@media (max-width: 600px){
+    .padd{
+        padding: 0px 40px 0px 40px;
+    }
+    .padd_head{
+        padding: 0px 0px 0px 40px;
+    }
+    #cursor{
+        display: none;
+    }
+    .head_service::after{
+        display: none;
+    }
+    .sites-header .head-info h1{
+        font-size: 40px !important;
+    }
+}
+@media (max-width: 500px){
+    .padd{
+        padding: 0px 30px 0px 30px;
+    }
+    .padd_head{
+        padding: 0px 0px 0px 30px;
+    }
+}
+@media (max-width: 400px){
+    .padd{
+        padding: 0px 15px 0px 15px;
+    }
+    .padd_head{
+        padding: 0px 15px 0px 15px;
+    }
+    .sites-header .head-info h1{
+        font-size: 30px !important;
+    }
+}
+/* globals */
+
+
+/* tablets */
+@media (max-width: 1200px){   
+    .navigation .animate-decor{
+        display: none;
+    }
+    .navigation .logo img{
+        max-width: 140px !important;
+    }
+    .about-image{
+        margin-top: 50px;
+    }
+}
+@media (max-width: 1000px){   
+    .navigation .head-links{
+        display: none;
+    }
+    .contact-head{
+        display: none;
+    }
+    .contact .sendForm{
+        max-width: 100% !important;
+        margin-top: 200px;
+        margin-bottom: 200px;
+    }
+    .order_form{
+        flex-direction: column;
+    }
+    .order_me{
+        margin-top: 40px;
+        margin-left: 20px;
+    }
+}
+@media (max-width: 800px){   
+    .about-card{
+        max-width: 100%;
+    }
+    .project-buttons button{
+        margin-bottom: 10px;
+        padding: 15px 30px;
+    }
+    .project-buttons button::before,
+    .project-buttons button::after{
+        opacity: 0 !important;
+    }    
+    .price-card{
+        max-width: 100%;
+    }
+    .contact .sendForm{
+        padding: 35px;
+    }
+    .post-card{
+        width: 100%;
+    }
+    .thumb_post{
+        min-width: 400px !important;
+        min-height: 300px !important;
+    }
+}
+@media (max-width: 600px){
+    .input-group .colBox input[type="submit"]{
+        width: 100%;
+    }
+    .contact .sendForm{
+        padding: 20px;
+    }
+    .service_form{
+        width: 100% !important;
+        border-radius: 0px !important;
+        padding: 10px !important;
+        min-width: 100% !important;
+    }
+ }
+@media (max-width: 500px){   
+    .head-title,
+    .head-descr{
+        max-width: 300px;
+        
+    } 
+    .head-title{
+        letter-spacing: 0.19em;
+    }
+    .project-buttons button{
+        margin-right: 0px !important;
+    }
+    .contacts-info .contacts-info-content .cont-body .cont-text .cont-descr{
+        max-width: 100%;
+        font-size: 18px;
+    }
+    .thumb_post{
+        min-width: 300px !important;
+        min-height: 230px !important;
+    }
+}
+@media (max-width: 400px){   
+    .post-card .readMorePost{
+        font-size: 15.6px !important;
+    }
+    .modal-menu-top{
+        left: 5%;
+    }
+    .service_form{
+        padding: 5px !important;
+    }
+}
